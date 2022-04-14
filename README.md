@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Active Profile Icon
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## About
+This app demonstrates a dynamic user profile icon. Its characteristics are:
++ A user profile icon created from a user profile object
++ The icon displays the initials of the user's first and last names
++ The user's intials drive the colors of the icon
++ A click on the icon displays the rendered profile
++ The profile has an active sign out item
 
-In the project directory, you can run:
+## Demo Profile Object
 
-### `yarn start`
+```javascript
+const userProfile = {
+    username: 'bsmith',
+    firstName: 'Bob',
+    lastName: 'Smith',
+    email: 'bsmith@zmail.com'
+}
+```
+## Install
+1. git Clone the project
+2. `yarn install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Execute in Developer Mode
+`yarn start` from project root to run in developer mode
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Build
+`yarn build` creates `build` folder
 
-### `yarn test`
+## End-to-End Test
+1. `yarn cy`
+2. Wait for Cypress to open 
+3. Click `profile_icon.feature` in _Integration Tests_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cypress Test Runner
+![Cypress test runner GUI](./doc-img/profile-icon-cy-1.png)
 
-### `yarn build`
+### Cypress with Cucumber: `profile_icon.feature`
+![Feature profile_icon](./doc-img/profile-icon-cy-2.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screens
+Cycling through sign-in to profile icon and its click-up menu, and back to sign-in:
+### Initial Screen
+![Initial Screen](./doc-img/profiile-icon-a.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Logged Into Session 
+![In Session](./doc-img/profiile-icon-b.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Profile After Clicking Ioion
+![Profile popup](./doc-img/profiile-icon-c.png)
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### After Clicking Sign Out in Profile
+![doc-img/profiile-icon-d.png](./doc-img/profiile-icon-d.png)
